@@ -13,7 +13,7 @@ model = 'RollingSpider';
 % Save variabe to .MAT fie for persistence
 save(fullfile(projectRoot,'mainModels','modelParrot.mat'),'model');
 % Update title
-mainModel = 'parrotMinidroneCompetition';
+mainModel = 'frants';
 load_system(mainModel);
 ah = find_system(mainModel,'FindAll','on','type','annotation','tag','ModelTitle');
 ao = get_param(ah,'object');

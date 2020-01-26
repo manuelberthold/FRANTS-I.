@@ -11,9 +11,13 @@ p = slproject.getCurrentProject;
 
 projectRoot = p.RootFolder;
 % Set the location of slprj to be the "work" folder of the current project:
-myCacheFolder = fullfile(projectRoot, 'work');
+myCacheFolder = fullfile(projectRoot, 'cache');
 if ~exist(myCacheFolder, 'dir')
     mkdir(myCacheFolder)
 end
+myCodeGen = fullfile(projectRoot, 'codegen');
+if ~exist(myCodeGen, 'dir')
+    mkdir(myCodeGen)
+end
 Simulink.fileGenControl('set', 'CacheFolder', myCacheFolder, ...
-   'CodeGenFolder', myCacheFolder);
+   'CodeGenFolder', myCodeGen);
