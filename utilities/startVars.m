@@ -30,6 +30,8 @@ Ts= 0.005;
 % Simulation time
 TFinal = 100;
 
+% Start Y Value
+YValue = 0.0;
 % Geometric properties
 thrustArm = 0.10795;
 

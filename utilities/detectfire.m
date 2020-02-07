@@ -1,6 +1,6 @@
 function [imagebytes, firedetected] = detectfire(red, green, blue)
 rgbImage = zeros(120,160,3, 'uint8');
-    rgbImage(:,:,1) = uint8(red);
+rgbImage(:,:,1) = uint8(red);
 rgbImage(:,:,2) = uint8(green);
 rgbImage(:,:,3) = uint8(blue);
 imagebytes = rgbImage;
